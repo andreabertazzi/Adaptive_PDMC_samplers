@@ -1,7 +1,6 @@
 include("AdapPDMPs.jl")
 include("logistic.jl")
 include("pdmp.jl")
-# include("mala.jl")
 include("asvar.jl")
 
 using StatsBase # for autocor in plot_pdmp
@@ -11,8 +10,6 @@ using Optim
 
 n_batches = 50 # number of batches in batch means both for ess_pdmp as ess.
 
-
-## SETTINGS FOR LONG, SUBSAMPLING FOCUSED RUN
 epsilon = 0.1
 refresh_rate = 1.0;
 n_experiments = 20;
