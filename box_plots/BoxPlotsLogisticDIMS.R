@@ -1,7 +1,7 @@
 # plot by number of observations
 library(ggplot2)
 library(gridExtra)
-setwd("~/Dropbox/PhD_TUDelft/Codes")
+# setwd("...")
 filename_csv = "complete-results-by-dimensions-in-2--with-1000-observations-refresh-1.0-eps-0.1discrstep0.5timeadaps2000.0discrESS0horizon100000.0.csv"
 df = read.csv(filename_csv)
 
