@@ -1,6 +1,5 @@
 library(ggplot2)
 library(gridExtra)
-setwd("~/Dropbox/PhD_TUDelft/Codes")
 filename_csv = "gaussian-results-by-dimension-20to80-correlation0.8-with-refresh-1.0-discrstep-0.5-timeadaps-2000.0-discrESS-0-horizon-100000.0.csv"
 df = read.csv(filename_csv)
 
