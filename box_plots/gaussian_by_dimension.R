@@ -9,7 +9,6 @@ df$sampler<- factor(df$sampler, c("ZigZag", "BPS", "Adaptive ZigZag (full)","Ada
 p1 <- ggplot(data=df, aes(x=dimension, y=avg_ess_per_sec, fill=sampler)) + 
   geom_boxplot() + labs(x = "Dimension" ,y="Average ESS/sec") +
   scale_y_log10() +
-  #scale_y_log10(limits=c(10^(-1),10^(6.5))) +
   theme_minimal()  + 
   theme(text=element_text(size=23),
         legend.position = "bottom",
@@ -23,7 +22,6 @@ show(p1)
 
 p2 <- ggplot(data=df, aes(x=dimension, y=squared_radius_ess_per_sec, fill=sampler)) + 
   geom_boxplot() + labs(x = "Dimension" ,y="ESS/sec (Radius)") +
-#  scale_y_log10(limits=c(10^2,10^(8))) +
   scale_y_log10() +
   theme_minimal()  + 
   theme(text=element_text(size=23),
