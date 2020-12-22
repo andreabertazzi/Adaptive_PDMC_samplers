@@ -21,9 +21,6 @@ p1 <- ggplot(data=df, aes(x=correlation, y=avg_ess_per_sec, fill=sampler)) +
         legend.text = element_text(size = 25)) +
   guides(title="", fill = guide_legend(nrow=1))  +
   scale_fill_manual( values=c("#FF6633", "#339900"))
-  #  scale_fill_discrete(name = "", labels = c("ABPS (ref=0.1)","BPS (ref=0.1)","ABPS (ref=1)","BPS (ref=1)","ABPS (adap)")) 
-  # scale_fill_discrete(name = "", labels = c("BPS (ref=1)","Adaptive BPS (ref=1)","Adaptive BPS (adap)")) 
- # scale_fill_discrete(name = "", labels = c("Adaptive BPS (ref=1)","BPS (ref=1)")) 
 
 show(p1)
 
@@ -38,9 +35,6 @@ p2 <- ggplot(data=df, aes(x=correlation, y=squared_radius_ess_per_sec, fill=samp
         legend.title = element_blank(),
         legend.text = element_text(size = 25))  +
   scale_fill_manual( values=c("#FF6633", "#339900"))
-  # guides(title="Adaptive diagonal BPS vs standard BPS", fill = guide_legend(nrow=3)) #+
-  #  scale_fill_discrete(name = "", labels = c("ABPS (ref=0.1)","BPS (ref=0.1)","ABPS (ref=1)","BPS (ref=1)","ABPS (adap)")) 
-  # scale_fill_discrete(name = "", labels = c("BPS (ref=1)","Adaptive BPS (ref=1)","Adaptive BPS (adap)")) 
 
 show(p2)
 
@@ -58,8 +52,6 @@ show(p3)
 
 ## Box plots for BPS vs ABPS
 df = read.csv(filename_csv)
-
-# Box plots for ZZS vs Adaptive ZZS
 df = df[df$sampler != "ZigZag"& df$sampler != "Adaptive ZigZag (full)",]
 
 df$correlation <- as.factor(df$correlation)
@@ -76,9 +68,6 @@ p1 <- ggplot(data=df, aes(x=correlation, y=avg_ess_per_sec, fill=sampler)) +
         legend.text = element_text(size = 25)) +
   guides(title="", fill = guide_legend(nrow=1))  +
   scale_fill_manual( values=c( "gold2", "darkorange","#3399FF","springgreen3"))
-#  scale_fill_discrete(name = "", labels = c("ABPS (ref=0.1)","BPS (ref=0.1)","ABPS (ref=1)","BPS (ref=1)","ABPS (adap)")) 
-# scale_fill_discrete(name = "", labels = c("BPS (ref=1)","Adaptive BPS (ref=1)","Adaptive BPS (adap)")) 
-# scale_fill_discrete(name = "", labels = c("Adaptive BPS (ref=1)","BPS (ref=1)")) 
 
 show(p1)
 
@@ -93,9 +82,6 @@ p2 <- ggplot(data=df, aes(x=correlation, y=squared_radius_ess_per_sec, fill=samp
         legend.title = element_blank(),
         legend.text = element_text(size = 25))  +
   scale_fill_manual( values=c( "gold2", "darkorange","#3399FF","springgreen3"))
-# guides(title="Adaptive diagonal BPS vs standard BPS", fill = guide_legend(nrow=3)) #+
-#  scale_fill_discrete(name = "", labels = c("ABPS (ref=0.1)","BPS (ref=0.1)","ABPS (ref=1)","BPS (ref=1)","ABPS (adap)")) 
-# scale_fill_discrete(name = "", labels = c("BPS (ref=1)","Adaptive BPS (ref=1)","Adaptive BPS (adap)")) 
 
 show(p2)
 
